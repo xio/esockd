@@ -1,9 +1,10 @@
 language: erlang
-
 otp_release:
-   - 21.0.4
-
+  - 21.0
+notifications:
+  email:
+    - maxim@synrc.com
 script:
-  - make
-
-sudo: false
+  - "curl -fsSL https://raw.github.com/synrc/mad/master/mad > mad"
+  - "chmod +x mad"
+  - "./mad dep com"
